@@ -1,22 +1,22 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Hello Cruel World"/>
-    <br><br>
-    <hr>
-    <br>
-    <input type="text" name="" id="">
-
+  <div>
+    <div id="app">
+      <img alt="Vue logo" src="./assets/logo.png">
+      <Welcome msg="Parent/Child Data Flow with Props and Events"/>
+      <br><br>
+      <input type="text" v-model="adjective" @adjectiveReset="adjective = $event">
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Welcome from './components/Welcome.vue'
 
 export default {
   name: 'app',
+  adjective: 'Add Superlatives Here...',
   components: {
-    HelloWorld
+    Welcome
   }
 }
 </script>
@@ -30,4 +30,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+  image {
+    text-align: center;
+  }
 </style>
